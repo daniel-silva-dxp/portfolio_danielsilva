@@ -1,0 +1,11 @@
+{
+  "name": "daniel_silva_dev",
+  "version": "1.0.0",
+  "description": "Website Daniel Silva | Front-end Developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Silva",
+  "license": "MIT"
+}
