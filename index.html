@@ -128,14 +128,42 @@
     <main>
       <!-- NAVICON -->
       <header class="container">
-        <span id="x" class="icon-menu"></span>
+        <button class="btn-nav-container open-menu" disabled>
+          <div class="btn-nav"></div>
+        </button>
       </header>
       <!--END NAVICON-->
+
+      <!-- MENU -->
+      <nav class="float-nav">
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="container">
+          <ul class="main-nav">
+            <li><a id="home" href="#home">Home</a></li>
+            <li><a href="#about">Quem Sou</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- END MENU-->
 
       <!-- HOME -->
       <section class="home">
         <div class="container">
-          <span class="tags top-tags"> &nbsp;&nbsp;&nbsp;&lt;body&gt;</span>
+          <span
+            class="tags top-tags"
+            data-aos="fade-up"
+            data-aos-delay="30"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="right-center"
+          >
+            &nbsp;&nbsp;&nbsp;&lt;body&gt;</span
+          >
           <div class="display-align">
             <div class="text-display aos-all">
               <h1
@@ -221,7 +249,7 @@
                     alt=""
                     srcset=""
                     class="elipse item-one"
-                    data-aos="fade-up"
+                    data-aos="fade-up-right"
                     data-aos-delay="200"
                     data-aos-duration="700"
                     data-aos-easing="ease-in-out"
@@ -234,7 +262,7 @@
                     alt=""
                     srcset=""
                     class="elipse item-two"
-                    data-aos="fade-up"
+                    data-aos="fade-down-right"
                     data-aos-delay="250"
                     data-aos-duration="700"
                     data-aos-easing="ease-in-out"
@@ -247,7 +275,7 @@
                     alt=""
                     srcset=""
                     class="elipse item-three"
-                    data-aos="fade-up"
+                    data-aos="fade-up-left"
                     data-aos-delay="300"
                     data-aos-duration="700"
                     data-aos-easing="ease-in-out"
@@ -259,7 +287,16 @@
               </div>
             </div>
           </div>
-          <span class="tags bottom-tags">
+          <span
+            class="tags bottom-tags"
+            data-aos="fade-up"
+            data-aos-delay="30"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            data-aos-anchor-placement="right-center"
+          >
             &nbsp;&nbsp;&nbsp;&lt;/body&gt;<br />
             &lt;/html&gt;
           </span>
@@ -289,6 +326,6 @@
     <script src="./src/js/animate.js"></script>
     <script src="./src/js/preloader.js"></script>
     <script src="./src/js/main.js"></script>
-    <script src="./src/js/icon-menu.js"></script>
+    <script src="./src/js/fullscreen-menu.js"></script>
   </body>
 </html>
