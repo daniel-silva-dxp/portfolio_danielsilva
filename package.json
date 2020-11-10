@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Daniel Silva",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-silva-dxp/portfolio_danielsilva.git"
+  },
+  "author": "Daniel Silva <dani3l.dxp@gmail.com>",
   "license": "MIT"
 }
