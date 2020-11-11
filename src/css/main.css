@@ -29,10 +29,10 @@ html,
 body {
   scroll-behavior: smooth;
   color: var(--grey-color-1);
+  overflow-x: hidden;
 }
 body {
   font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
 }
 ol,
 ul {
@@ -268,8 +268,6 @@ header {
   position: relative;
 }
 header.container {
-  padding: 14px 0;
-  height: 60px;
   display: flex;
   flex-flow: row-reverse wrap;
 }
@@ -366,30 +364,65 @@ ul {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   max-width: none;
 }
+.float-nav .logo-menu {
+  max-width: 600px;
+  margin: 20px;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
 .float-nav ul {
+  position: relative;
   display: flex;
   flex-direction: column;
   max-height: 100vh;
   opacity: 0;
   transition: all 0.3s ease 0s;
   padding: 0;
+  margin: 40px;
+}
+.float-nav ul::before,
+.float-nav ul::after {
+  text-transform: lowercase;
+  position: absolute;
+  font-size: 18px;
+  color: var(--grey-color-3);
+  font-family: "La Belle Aurore";
+}
+.float-nav ul::before {
+  content: "<h1>";
+  top: -20%;
+}
+.float-nav ul::after {
+  content: "</h1>";
+  bottom: 0;
+  right: -20%;
 }
 .float-nav ul li {
   flex: 1;
   position: relative;
   margin-bottom: 20px;
-  text-align: center;
   transition: all 0.2s ease 0.3s;
+}
+.float-nav ul li span {
+  transform: rotate(-90deg);
+  margin-right: 40px;
+  padding: 5px;
+  color: var(--green-color);
 }
 .float-nav ul li a {
   font-size: 16px;
   position: relative;
   color: var(--grey-color-1);
   letter-spacing: 0.4em;
+  transition: all 0.2s ease 0.2s;
+}
+.float-nav ul li a:hover {
+  color: var(--green-color);
 }
 .float-nav.active .bg1,
 .float-nav.active .bg2 {
@@ -401,6 +434,7 @@ ul {
 .float-nav.active .bg2 {
   transition-delay: 0.3s;
 }
+.float-nav.active .logo-menu,
 .float-nav.active ul {
   opacity: 1;
   transition-delay: 1s;
@@ -409,7 +443,7 @@ ul {
 /* HOME */
 .home {
   width: 100%;
-  height: 93vh;
+  height: 100vh;
   position: relative;
   display: flex;
   flex-flow: column wrap;
@@ -545,19 +579,15 @@ ul {
   right: 0;
   z-index: 1999999999;
 }
-
 .preloader.immune {
   bottom: 0;
 }
-
 .preloader.white {
   background-color: rgba(255, 255, 255, 0.3);
 }
-
 .preloader.black {
   background-color: rgba(1, 1, 1, 0.5);
 }
-
 .preloader > i.radial-loader:not(:required) {
   -moz-animation: radial-loader 0.5s infinite linear;
   -webkit-animation: radial-loader 0.5s infinite linear;
@@ -570,12 +600,11 @@ ul {
   display: block;
   position: relative;
   float: right;
-  margin: 10px;
+  margin: 10px 40px;
   overflow: hidden;
   width: 10px;
   height: 10px;
 }
-
 .preloader > span.loading-bar {
   -moz-animation: loading-bar 3s 1;
   -webkit-animation: loading-bar 3s 1;

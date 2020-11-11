@@ -32,7 +32,4 @@ $(document).ready(function () {
   $(".float-nav ul li").on("click", "a", function () {
     fechaMenu();
   });
-  $(".home").on("click", () => {
-    $(this).scrollTop(0);
-  });
 });
