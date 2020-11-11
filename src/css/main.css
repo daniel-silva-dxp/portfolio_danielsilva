@@ -554,7 +554,7 @@ ul {
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 0;
+  bottom: 60px;
 }
 
 /**********************
@@ -641,16 +641,61 @@ ul {
 }
 
 /**********************
- CASES 
+ DNA 
  **********************/
-.cases {
+.dna {
   width: 100%;
   height: 100vh;
   position: relative;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  background-color: #6ef3a5;
+}
+.align-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-items {
+  width: 100%;
+  height: 113px;
+}
+.wrap-items span {
+  font-family: "Roboto Mono";
+  color: var(--green-color);
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 20px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.wrap-items p {
+  padding-top: 10px;
+  position: relative;
+}
+.wrap-items p::before {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--green-color);
+  -webkit-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
+  -webkit-transform: scale(0.1, 1);
+  -ms-transform: scale(0.1, 1);
+  transform: scale(0.1, 1);
+  transform-origin: center left;
+}
+.wrap-items p:hover::before {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 /**********************
@@ -889,11 +934,24 @@ ul {
   .photo .react-icon {
     right: 25%;
   }
+  .scroll {
+    bottom: 0;
+  }
   /* ABOUT */
   .photo-about .ds-photo-dark {
     width: 350px;
   }
   .photo-about .react-icon {
     right: 25%;
+  }
+  /* DNA */
+  .align-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .wrap-items {
+    width: calc((100% / 3) - 20px);
   }
 }
