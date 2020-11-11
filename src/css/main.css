@@ -512,9 +512,9 @@ ul {
   width: 80px;
 }
 .photo .react-icon {
-  right: 20%;
+  right: 5%;
   top: 35%;
-  width: 50px;
+  width: 40px;
 }
 .photo .js-icon {
   bottom: -2%;
@@ -531,7 +531,7 @@ ul {
   position: absolute;
 }
 .photo .wrap-elipse .item-one {
-  right: 30%;
+  right: 25%;
   top: 30%;
 }
 .photo .wrap-elipse .item-two {
@@ -542,7 +542,7 @@ ul {
   bottom: 40%;
 }
 .scroll {
-  width: 8px;
+  width: 5px;
   position: absolute;
   left: 0;
   right: 0;
@@ -601,9 +601,9 @@ ul {
   width: 80px;
 }
 .photo-about .react-icon {
-  right: 25%;
+  right: 5%;
   top: 35%;
-  width: 50px;
+  width: 40px;
 }
 .photo-about .js-icon {
   bottom: -2%;
@@ -620,7 +620,7 @@ ul {
   position: absolute;
 }
 .photo-about .wrap-elipse .item-one {
-  right: 40%;
+  right: 20%;
   top: 30%;
 }
 .photo-about .wrap-elipse .item-two {
@@ -875,9 +875,15 @@ ul {
   .photo .ds-photo {
     width: 400px;
   }
+  .photo .react-icon {
+    right: 25%;
+  }
   /* ABOUT */
   .photo-about .ds-photo-dark {
     width: 350px;
+  }
+  .photo-about .react-icon {
+    right: 25%;
   }
 }
 
