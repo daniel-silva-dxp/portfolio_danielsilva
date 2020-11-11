@@ -104,11 +104,6 @@ button {
     max-width: 1140px;
   }
 }
-@media (min-width: 1920px) {
-  .container {
-    max-width: 1640px;
-  }
-}
 .tags {
   color: var(--grey-color-3);
   position: fixed;
