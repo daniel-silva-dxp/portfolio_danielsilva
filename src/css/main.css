@@ -742,12 +742,88 @@ ul {
             CASES 
                     **********************/
 .cases {
+  padding: 20px 0;
   width: 100%;
   height: 100vh;
   position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.case-item-info {
+  text-align: left;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.case-item-info h1 {
+  font-size: 42px;
+  line-height: 42px;
+  margin-bottom: 5px;
+}
+.case-item-info h4 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 32px;
+  color: var(--green-color);
+}
+.case-item-thumb {
+  width: 500px;
+  position: absolute;
+  top: calc((100% - 340px));
+}
+.case-item-buttom {
+  position: absolute;
+  width: 100%;
+  bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.case-item-buttom h5 {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.swiper-pagination {
+  font-size: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  text-align: center;
+  font-family: "Roboto Mono";
+  line-height: 32px;
+  letter-spacing: -0.1em;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  top: 95% !important;
+  color: var(--green-color) !important;
+}
+.swiper-button-next {
+  right: 20% !important;
+}
+.swiper-button-prev {
+  left: 20% !important;
 }
 
 /**********************
@@ -958,29 +1034,15 @@ ul {
   .wrap-photo .dark-img {
     width: 430px;
   }
-}
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  /**********************
+            CASES 
+                    **********************/
+  .case-item-thumb {
+    width: 850px;
+    top: calc((100% - 340px) / 4);
+  }
+  .case-item-buttom {
+    bottom: 45px;
+  }
 }
