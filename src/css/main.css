@@ -282,6 +282,42 @@ button {
 .display-flex {
   display: flex;
 }
+.social-links {
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.social-links li:nth-child(1),
+.social-links li:nth-child(2) {
+  margin-right: 40px;
+}
+.cl-effect-5 a {
+  overflow: hidden;
+  padding: 0 4px;
+  height: 1em;
+}
+.cl-effect-5 a span {
+  position: relative;
+  display: inline-block;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.cl-effect-5 a span::before {
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  color: var(--green-color);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.cl-effect-5 a:hover span,
+.cl-effect-5 a:focus span {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
 
 /**********************
             BUTTONS 
@@ -543,7 +579,22 @@ ul {
   align-items: center;
   justify-content: center;
 }
-.display-align {
+.home .container nav a {
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-transform: initial;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.home .container nav a:hover,
+.home .container nav a:focus {
+  outline: none;
+}
+.content {
   width: 100%;
   height: auto;
   flex-flow: column;
@@ -643,6 +694,32 @@ ul {
   right: 0;
   margin: 0 auto;
   bottom: 60px;
+}
+
+/**********************
+            ABOUT 
+                    **********************/
+.about {
+  background-color: #6ef3a5;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about nav a {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-transform: initial;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.about nav a:hover,
+.about nav a:focus {
+  outline: none;
 }
 
 /**********************
@@ -812,10 +889,14 @@ ul {
             MEDIA QUERIES 
                     **********************/
 @media only screen and (min-width: 992px) {
+  .social-links {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
   /**********************
             HOME 
                     **********************/
-  .display-align {
+  .content {
     flex-flow: row;
   }
   .display-txt h1 {
