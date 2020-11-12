@@ -688,12 +688,12 @@ ul {
   bottom: 40%;
 }
 .scroll {
-  width: 5px;
+  width: 6px;
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 60px;
+  bottom: 0;
 }
 
 /**********************
@@ -927,9 +927,6 @@ ul {
   }
   .wrap-photo .white-img {
     width: 430px;
-  }
-  .scroll {
-    bottom: 0;
   }
   /**********************
             ABOUT 
