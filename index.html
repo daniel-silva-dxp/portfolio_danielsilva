@@ -529,16 +529,7 @@
       </section>
       <section id="cases" class="cases display-flex">
         <div class="container">
-          <div
-            class="title"
-            data-aos="fade-right"
-            data-aos-delay="30"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="false"
-            data-aos-once="true"
-            data-aos-anchor-placement="right-center"
-          >
+          <div class="title">
             <h1>
               criando
               <span>
@@ -616,6 +607,21 @@
               <div class="swiper-button-prev"></div>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <form action="./src/php/email.php" method="POST">
+            <input type="text" name="nome" placeholder="Nome" />
+            <input type="text" name="email" placeholder="E-mail" />
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="mensagem"
+            ></textarea>
+            <input type="submit" value="Enviar" />
+          </form>
         </div>
       </section>
     </main>

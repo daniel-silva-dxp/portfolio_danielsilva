@@ -834,6 +834,20 @@ ul {
 }
 
 /**********************
+            CONTACT 
+                    **********************/
+.contact {
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #6ef3a5;
+}
+
+/**********************
             LINES DIVIDER 
                     **********************/
 .lines {
