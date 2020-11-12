@@ -558,7 +558,7 @@ ul {
 .display-txt h1 {
   width: 100%;
   position: relative;
-  font-size: 60px;
+  font-size: 58px;
   text-transform: uppercase;
 }
 .display-txt h1::before,
