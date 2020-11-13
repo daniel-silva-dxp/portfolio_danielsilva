@@ -39,6 +39,9 @@ var slider_capa = new Swiper(".slide-capa-cases", {
     spaceBetween: 16,
     speed: 600,
     loop: !0,
-    pagination: { el: ".slide-cases-mb .swiper-pagination", clickable: !0 },
+    pagination: {
+      el: ".swiper-count-mb",
+      type: "fraction",
+    },
     breakpoints: { 320: { slidesPerView: 1.3 }, 991: { slidesPerView: 2.8 } },
   });
