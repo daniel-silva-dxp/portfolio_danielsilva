@@ -726,6 +726,9 @@ ul {
 .wrap-photo .dark-img {
   width: 220px;
 }
+.display-txt .wrap {
+  margin-bottom: 40px;
+}
 .display-txt .wrap h4 {
   margin-top: 30px;
   font-size: 58px;
