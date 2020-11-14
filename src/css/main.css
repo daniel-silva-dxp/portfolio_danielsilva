@@ -211,6 +211,8 @@ button {
 .display-txt {
   width: 100%;
   max-width: 660px;
+}
+.position-relative {
   position: relative;
 }
 .tags {
@@ -230,7 +232,6 @@ button {
   bottom: 20px;
 }
 .title {
-  position: relative;
   display: block;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -330,7 +331,27 @@ button {
   -moz-transform: translateY(-100%);
   transform: translateY(-100%);
 }
-
+.home .container nav a,
+.about .container nav a,
+.slide-about-cases .swiper-slide nav a {
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  text-transform: initial;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 14px;
+}
+.home .container nav a:hover,
+.home .container nav a:focus,
+.about .container nav a:hover,
+.about .container nav a:focus,
+.slide-about-cases .swiper-slide nav a:hover,
+.slide-about-cases .swiper-slide nav a:focus {
+  outline: none;
+}
 /**********************
             BUTTONS 
                     **********************/
@@ -405,7 +426,7 @@ button {
             MENU 
                     **********************/
 header {
-  position: relative;
+  z-index: 999;
 }
 header.container {
   display: flex;
@@ -434,7 +455,6 @@ ul {
 .btn-nav {
   width: 100%;
   height: 3px;
-  position: relative;
   background: var(--grey-color-1);
   top: 0;
   transition: all ease 0.2s;
@@ -587,25 +607,9 @@ ul {
 .home {
   width: 100%;
   height: 100vh;
-  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.home .container nav a {
-  height: 20px;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  text-transform: initial;
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 14px;
-}
-.home .container nav a:hover,
-.home .container nav a:focus {
-  outline: none;
 }
 .display-txt h1 {
   width: 100%;
@@ -647,7 +651,6 @@ ul {
 .wrap-photo {
   z-index: 90;
   padding: 10px;
-  position: relative;
   flex: 1;
 }
 .wrap-photo .white-img {
@@ -703,25 +706,9 @@ ul {
 .about {
   width: 100%;
   height: 100vh;
-  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.about .container nav a {
-  height: 20px;
-  position: relative;
-  display: inline-block;
-  outline: none;
-  text-transform: initial;
-  text-decoration: none;
-  letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 14px;
-}
-.about .container nav a:hover,
-.about .container nav a:focus {
-  outline: none;
 }
 .wrap-photo .dark-img {
   width: 220px;
@@ -746,11 +733,9 @@ ul {
             CASES 
                     **********************/
 .cases {
-  z-index: 999;
   margin-top: 40px;
   width: 100%;
-  height: 100vh;
-  position: relative;
+  height: table;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -829,7 +814,6 @@ ul {
   padding: 20px;
   width: 100%;
   height: 100vh;
-  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -846,13 +830,12 @@ ul {
   height: 100vh;
   font-size: 0;
   pointer-events: none;
-  z-index: 1111;
+  z-index: 20;
 }
 .lines.ready {
   z-index: 1;
 }
 .lines .line-col {
-  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 20%;
@@ -1023,7 +1006,16 @@ ul {
     font-size: 14px;
   }
   .wrap-photo .white-img {
-    width: 430px;
+    width: 300px;
+  }
+  .wrap-photo .react-icon {
+    right: 35%;
+  }
+  .wrap-photo .wrap-elipse .item-one {
+    right: 45%;
+  }
+  .wrap-photo .wrap-elipse .item-two {
+    right: 35%;
   }
   /**********************
             ABOUT 
@@ -1041,7 +1033,7 @@ ul {
     font-size: 14px;
   }
   .wrap-photo .dark-img {
-    width: 430px;
+    width: 300px;
   }
 
   /**********************
@@ -1058,7 +1050,6 @@ ul {
   }
   .area-slide {
     display: block;
-    position: relative;
     width: 100%;
     height: 493px;
     margin-top: 76px;
@@ -1070,22 +1061,9 @@ ul {
     top: 0;
     left: 0;
     overflow: hidden;
-    width: 1460px;
+    width: 90%;
     height: 100%;
     pointer-events: none;
-  }
-  .area-slide .slide-about-cases {
-    width: 330px;
-    height: 450px;
-  }
-  .ctrl-slide {
-    width: 1248px;
-    height: 60px;
-    padding: 0 15px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
   .area-slide .slide-capa-cases .swiper-slide {
     opacity: 0;
@@ -1106,8 +1084,8 @@ ul {
   }
   .area-slide .slide-about-cases {
     width: 330px;
-    margin-right: 50px;
     height: 400px;
+    margin-right: 20px;
   }
   .area-slide .slide-about-cases .swiper-slide {
     opacity: 0;
@@ -1137,15 +1115,15 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 60px 10px 10px;
+    padding: 80px 10px 10px;
   }
   .slide-about-cases .swiper-slide h1 {
-    font-size: 48px;
-    line-height: 48px;
-  }
-  .slide-about-cases .swiper-slide h4 {
     font-size: 36px;
     line-height: 36px;
+  }
+  .slide-about-cases .swiper-slide h4 {
+    font-size: 28px;
+    line-height: 28px;
     color: var(--green-color);
   }
   .slide-about-cases .swiper-slide p {
@@ -1156,21 +1134,6 @@ ul {
     font-size: 12px;
     font-weight: 600;
     color: var(--grey-color-3);
-  }
-  .slide-about-cases .swiper-slide nav a {
-    height: 20px;
-    position: relative;
-    display: inline-block;
-    outline: none;
-    text-transform: initial;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: 400;
-    font-size: 14px;
-  }
-  .slide-about-cases .swiper-slide nav a:hover,
-  .slide-about-cases .swiper-slide nav a:focus {
-    outline: none;
   }
   .control-slide {
     margin-top: -40px;
@@ -1190,5 +1153,52 @@ ul {
   }
   .control-slide .swiper-count {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 1367px) {
+  /**********************
+            HOME 
+                    **********************/
+  .wrap-photo .white-img {
+    width: 400px;
+  }
+  .wrap-photo .react-icon {
+    right: 20%;
+  }
+  .wrap-photo .wrap-elipse .item-one {
+    right: 30%;
+  }
+  .wrap-photo .wrap-elipse .item-two {
+    right: 25%;
+  }
+
+  /**********************
+                              ABOUT 
+                                      **********************/
+
+  .wrap-photo .dark-img {
+    width: 400px;
+  }
+
+  /**********************
+                              CASES 
+                                      **********************/
+  .area-slide .slide-about-cases {
+    margin-right: 50px;
+  }
+  .area-slide .slide-about-cases {
+    margin-right: -60px;
+  }
+  .slide-about-cases .swiper-slide {
+    padding: 40px 10px 10px;
+  }
+  .slide-about-cases .swiper-slide h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .slide-about-cases .swiper-slide h4 {
+    font-size: 36px;
+    line-height: 36px;
   }
 }
