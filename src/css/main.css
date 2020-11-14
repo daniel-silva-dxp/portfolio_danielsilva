@@ -818,6 +818,29 @@ ul {
   justify-content: center;
 }
 
+.footer {
+  background-color: var(--green-color);
+  border-top: 4px solid var(--grey-color-1);
+  height: 60px;
+}
+.footer a {
+  font-size: 12px;
+  transition: all 0.3s;
+}
+.footer a:hover {
+  color: var(--grey-color-1);
+}
+.copyright {
+  color: #fff;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright small {
+  color: #fff;
+  margin-top: 20px;
+}
 /**********************
             LINES DIVIDER 
                     **********************/
@@ -1136,6 +1159,7 @@ ul {
   }
   .control-slide {
     margin-top: -40px;
+    margin-bottom: 40px;
   }
   .control-slide .swiper-btn-prev,
   .control-slide .swiper-btn-next {

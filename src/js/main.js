@@ -1,6 +1,27 @@
 "use strict";
-AOS.init({
-  easing: "ease-in-out-sine",
+$(document).ready(function () {
+  AOS.init({
+    easing: "ease-in-out-sine",
+  });
+  /* ---------------------------------------------- /*
+		 * Smooth scroll / Scroll To Top
+    /* ---------------------------------------------- */
+  $("a.link").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
+        },
+        1000,
+        function () {
+          window.location.hash = "";
+        }
+      );
+    }
+  });
 });
 //SWIPER
 var slider_capa = new Swiper(".slide-capa-cases", {
