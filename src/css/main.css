@@ -782,10 +782,25 @@ ul {
   justify-content: center;
   align-items: center;
 }
-.swiper-count {
+.control-slide {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.control-slide .swiper-cout-content {
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  font-family: "Roboto Mono";
+  font-size: 14px;
+  font-weight: 600;
+}
+.control-slide .swiper-btn-next,
+.control-slide .swiper-btn-prev {
   display: none;
 }
-.ctrl-slide .btns {
+.control-slide .swiper-count {
   display: none;
 }
 
@@ -1094,13 +1109,23 @@ ul {
     -o-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .swiper-count-mb {
+  .control-slide {
+    margin-top: -40px;
+  }
+  .control-slide .swiper-btn-prev,
+  .control-slide .swiper-btn-next {
+    z-index: 999;
+    width: 40px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .control-slide .swiper-count-mb {
     display: none;
   }
-  .swiper-count {
-    display: block;
-  }
-  .ctrl-slide .btns {
+  .control-slide .swiper-count {
     display: block;
   }
 }

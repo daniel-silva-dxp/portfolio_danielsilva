@@ -16,8 +16,8 @@ var slider_capa = new Swiper(".slide-capa-cases", {
       type: "fraction",
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".control-slide .swiper-btn-next",
+      prevEl: ".swiper-btn-prev",
     },
   }),
   slider_about = new Swiper(".slide-about-cases", {
@@ -30,8 +30,8 @@ var slider_capa = new Swiper(".slide-capa-cases", {
       type: "fraction",
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-btn-next",
+      prevEl: ".swiper-btn-prev",
     },
   }),
   slide_cases_mobile = new Swiper(".slide-cases-mb", {
