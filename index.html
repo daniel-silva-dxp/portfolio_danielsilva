@@ -720,6 +720,50 @@
               </span>
             </h1>
           </div>
+          <form id="contact-form" role="form" action="contact.php" method="POST">
+            <div class="ajax-hidden">
+              <div class="form-group wow fadeInUp">
+                <label class="sr-only" for="c_name">Name</label>
+                <input
+                  type="text"
+                  id="c_name"
+                  class="form-control"
+                  name="c_name"
+                  placeholder="Nome"
+                />
+              </div>
+
+              <div class="form-group wow fadeInUp" data-wow-delay=".1s">
+                <label class="sr-only" for="c_email">Email</label>
+                <input
+                  type="email"
+                  id="c_email"
+                  class="form-control"
+                  name="c_email"
+                  placeholder="E-mail"
+                />
+              </div>
+
+              <div class="form-group wow fadeInUp" data-wow-delay=".2s">
+                <textarea
+                  class="form-control"
+                  id="c_message"
+                  name="c_message"
+                  rows="7"
+                  placeholder="Messagem"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-lg btn-block wow fadeInUp"
+                data-wow-delay=".3s"
+              >
+                Enviar Mensagem
+              </button>
+            </div>
+            <div class="ajax-response"></div>
+          </form>
         </div>
       </section>
       <footer id="footer" class="footer">
