@@ -425,7 +425,7 @@ button {
             MENU 
                     **********************/
 header {
-  z-index: 999;
+  z-index: 900;
 }
 header.container {
   display: flex;
@@ -446,7 +446,7 @@ ul {
   height: 20px;
   margin-top: 3.5em;
   cursor: pointer;
-  z-index: 999;
+  z-index: 901;
   background: transparent;
   border: none;
   outline: none;
@@ -516,7 +516,7 @@ ul {
   transition-delay: 0s;
 }
 .float-nav .container {
-  z-index: 100;
+  z-index: 200;
   position: absolute;
   top: 0;
   left: 0;
@@ -738,6 +738,7 @@ ul {
   justify-content: center;
 }
 .cases .slide-cases-mb {
+  z-index: 90;
   width: 100%;
   height: 493px;
   overflow: hidden;
@@ -814,6 +815,10 @@ ul {
   align-items: center;
   justify-content: center;
 }
+
+/**********************
+            FOOTER 
+                    **********************/
 .footer {
   background-color: var(--green-color);
   border-top: 4px solid var(--grey-color-1);
@@ -906,7 +911,7 @@ ul {
   width: 100%;
   height: 100%;
   background: #1e1e1e;
-  z-index: 12;
+  z-index: 10;
   transition: height 1s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
   -moz-transition: height 1s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
   -webkit-transition: height 1s cubic-bezier(0.165, 0.85, 0.45, 1) 0s;
@@ -1068,6 +1073,7 @@ ul {
   }
   .area-slide {
     display: block;
+    z-index: 90;
     width: 100%;
     height: 493px;
     margin-top: 76px;
@@ -1159,7 +1165,7 @@ ul {
   }
   .control-slide .swiper-btn-prev,
   .control-slide .swiper-btn-next {
-    z-index: 999;
+    z-index: 100;
     width: 40px;
     outline: none;
     cursor: pointer;
