@@ -705,16 +705,13 @@ ul {
 .about {
   width: 100%;
   height: table;
-  padding: 40px 0;
+  padding: 20px 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .wrap-photo .dark-img {
   width: 220px;
-}
-.display-txt .wrap {
-  margin-bottom: 40px;
 }
 .display-txt .wrap h4 {
   margin-top: 30px;
@@ -735,7 +732,7 @@ ul {
 .cases {
   width: 100%;
   height: table;
-  padding: 40px 0;
+  padding: 20px 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
