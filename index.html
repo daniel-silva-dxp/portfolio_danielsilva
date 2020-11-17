@@ -699,7 +699,7 @@
         </div>
         </div>
       </section>
-      <section id="contact" class="contact position-relative" style="display: none;">
+      <section id="contact" class="contact position-relative">
         <div class="container">
           <div 
             class="title position-relative" 
@@ -720,63 +720,49 @@
               </span>
             </h1>
           </div>
-          <form id="contact-form" role="form" action="contact.php" method="POST">
-            <div class="ajax-hidden">
-              <div class="form-group wow fadeInUp">
-                <label class="sr-only" for="c_name">Name</label>
+          <form class="content display-flex" action="contact.php" method="POST" autocomplete="off">
+            <div class="display-form">
+              <h4>O que eu posso fazer <span class="markup">pra te ajudar?</span></h4>
+              <p>Conte-me um pouco sobre seu projeto.</p>
+              <div class="input-group">
                 <input
                   type="text"
-                  id="c_name"
-                  class="form-control"
                   name="c_name"
-                  placeholder="Nome"
+                  required
+                  class="form-control"
                 />
+                <span class="bar"></span>
+                <label>Nome:</label>
               </div>
-
-              <div class="form-group wow fadeInUp" data-wow-delay=".1s">
-                <label class="sr-only" for="c_email">Email</label>
+              <div class="input-group">
                 <input
                   type="email"
-                  id="c_email"
-                  class="form-control"
                   name="c_email"
-                  placeholder="E-mail"
-                />
-              </div>
-
-              <div class="form-group wow fadeInUp" data-wow-delay=".2s">
-                <textarea
+                  required
                   class="form-control"
-                  id="c_message"
-                  name="c_message"
-                  rows="7"
-                  placeholder="Messagem"
-                ></textarea>
+                />
+                <span class="bar"></span>
+                <label>E-mail:</label>
               </div>
-
-              <button
-                type="submit"
-                class="btn btn-lg btn-block wow fadeInUp"
-                data-wow-delay=".3s"
-              >
-                Enviar Mensagem
-              </button>
+              <div class="radio-group">
+                <p>Já possue layout?</p>
+                <div class="wrap-radio">                  
+                  <div class="checkbox">
+                    <input type="checkbox" id="sim" name="c_sim" value="Sim">
+                    <label for="sim">sim</label>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group">
+                <textarea name="c_message" id="message" cols="30" rows="10" class="form-control" required></textarea>
+                <span class="bar"></span>
+                <label>Mensagem:</label>
+              </div>
+              <button type="submit" class="btn btn-extra-large btn-dark">Enviar mensagem</button>
             </div>
-            <div class="ajax-response"></div>
           </form>
         </div>
       </section>
-      <footer id="footer" class="footer">
-        <div class="container">
-          <p class="copyright">
-            <span class="copyright">
-              <a href="#">
-                <small>© 2020 </small>Daniel Silva - Frontend Developer e UX/UI Design</a
-              ></span
-            >
-          </p>
-        </div>
-      </footer>
     </main>
 
     <script src="./src/js/swiper-bundles.min.js"></script>
