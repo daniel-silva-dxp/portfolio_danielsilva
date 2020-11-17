@@ -741,6 +741,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 90;
 }
 .cases .slide-cases-mb {
   width: 100%;
@@ -757,8 +758,12 @@ ul {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.wrap-case-img {
+.slide-cases-mb .swiper-slide .wrap-case-img {
+  z-index: 900;
   flex: 1;
+}
+.slide-cases-mb .swiper-slide .wrap-case-img img {
+  z-index: 900 !important;
 }
 .slide-cases-mb .swiper-slide .box {
   width: 100%;
@@ -815,6 +820,7 @@ ul {
   padding: 20px;
   width: 100%;
   height: 100vh;
+  z-index: 90;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -966,6 +972,46 @@ textarea {
 }
 .radio-group input:checked + label {
   color: #5d5d5d;
+}
+
+/**********************
+            TANKS - SEND MAIL 
+                    **********************/
+.tanks {
+  padding: 20px;
+  width: 100%;
+  height: 100vh;
+  z-index: 90;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tanks .content {
+  flex-direction: column;
+}
+.tanks .content .display-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.tanks .content .display-txt h1 {
+  font-size: 36px;
+  line-height: 48px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.tanks .content img {
+  margin-top: 40px;
+  width: 100px;
+}
+.tanks .content a {
+  display: block;
+  padding: 0 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /**********************
             FOOTER 

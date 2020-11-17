@@ -12,7 +12,7 @@ if(isset($_POST['c_email'])){
 	}
 	
 	$to      = "contato@danielsilva-dev.com.br";
-	$subject = 'Site Contact Form';
+	$subject = '[CONTATO] - Website Portfólio';
 	$body = '';
 	$body = "Prezado,\r\n";
 	$body .= "\r\n";
@@ -40,9 +40,9 @@ if(isset($_POST['c_email'])){
 	
 		// //Edit your message here
 		// $res['message'] = 'Form Submission Successful';
-		header('location:construct.html');
+		header('location:obrigado.html');
   } else{
-		$res['message'] = 'Failed to send mail. Please mail me to daniel_dxp@outlook';
+		header('location:falha.html');
 	}
 	
 	
