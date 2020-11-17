@@ -1365,11 +1365,11 @@ textarea {
     color: var(--grey-color-3);
   }
   .control-slide {
-    margin-top: -80px;
+    margin-top: -40px;
   }
   .control-slide .swiper-btn-prev,
   .control-slide .swiper-btn-next {
-    z-index: 100;
+    z-index: 120;
     width: 40px;
     outline: none;
     cursor: pointer;
