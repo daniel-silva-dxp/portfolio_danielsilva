@@ -291,9 +291,6 @@ button {
   -moz-text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 }
-.display-flex {
-  display: flex;
-}
 .social-links {
   margin-bottom: 20px;
   align-items: center;
@@ -303,19 +300,19 @@ button {
 .social-links li:nth-child(2) {
   margin-right: 40px;
 }
-.cl-effect-5 a {
+.cl-effect a {
   overflow: hidden;
   padding: 0 4px;
   height: 1em;
 }
-.cl-effect-5 a span {
+.cl-effect a span {
   position: relative;
   display: inline-block;
   -webkit-transition: -webkit-transform 0.3s;
   -moz-transition: -moz-transform 0.3s;
   transition: transform 0.3s;
 }
-.cl-effect-5 a span::before {
+.cl-effect a span::before {
   position: absolute;
   top: 100%;
   content: attr(data-hover);
@@ -324,14 +321,15 @@ button {
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-.cl-effect-5 a:hover span,
-.cl-effect-5 a:focus span {
+.cl-effect a:hover span,
+.cl-effect a:focus span {
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   transform: translateY(-100%);
 }
 .home .container nav a,
 .about .container nav a,
+.footer .container nav a,
 .slide-about-cases .swiper-slide nav a {
   height: 20px;
   position: relative;
@@ -347,10 +345,46 @@ button {
 .home .container nav a:focus,
 .about .container nav a:hover,
 .about .container nav a:focus,
+.footer .container nav a:hover,
+.footer .container nav a:focus,
 .slide-about-cases .swiper-slide nav a:hover,
 .slide-about-cases .swiper-slide nav a:focus {
   outline: none;
 }
+
+/**********************
+            ALIGN CLASSES 
+                    **********************/
+.display-flex {
+  display: flex;
+}
+.align-row-center {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.align-column-center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/**********************
+            SECTION CLASSES 
+                    **********************/
+.home,
+.about,
+.cases,
+.contact,
+.footer,
+.tanks {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+}
+
 /**********************
             BUTTONS 
                     **********************/
@@ -527,10 +561,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   max-width: none;
 }
 .float-nav .logo-menu {
@@ -609,11 +640,7 @@ ul {
             HOME 
                     **********************/
 .home {
-  width: 100%;
   height: 100vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .display-txt h1 {
   width: 100%;
@@ -708,12 +735,8 @@ ul {
             ABOUT 
                     **********************/
 .about {
-  width: 100%;
   height: table;
   padding: 20px 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .wrap-photo .dark-img {
   width: 220px;
@@ -735,13 +758,8 @@ ul {
             CASES 
                     **********************/
 .cases {
-  width: 100%;
   height: table;
   padding: 20px 0;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 90;
 }
 .cases .slide-cases-mb {
   width: 100%;
@@ -749,9 +767,6 @@ ul {
   overflow: hidden;
 }
 .slide-cases-mb .swiper-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   opacity: 0.3;
   -webkit-transition: all 0.3s;
@@ -817,13 +832,8 @@ ul {
             CONTACT 
                     **********************/
 .contact {
-  padding: 20px;
-  width: 100%;
-  height: 100vh;
-  z-index: 90;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 20px 0;
+  height: table;
 }
 .contact .content {
   align-items: flex-start;
@@ -975,25 +985,41 @@ textarea {
 }
 
 /**********************
-            TANKS - SEND MAIL 
+            Footer 
                     **********************/
-.tanks {
-  padding: 20px;
-  width: 100%;
-  height: 100vh;
-  z-index: 90;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.footer {
+  padding: 40px 0;
+  height: auto;
+  background-color: var(--grey-color-1);
 }
-.tanks .content {
-  flex-direction: column;
-}
-.tanks .content .display-txt {
+.footer .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.footer .content img {
+  width: 80px;
+}
+.footer nav.cl-effect a {
+  margin-top: 20px;
+  color: var(--white-color);
+}
+.footer .container p {
+  text-align: center;
+  font-size: 10px;
+  color: var(--white-color);
+  margin-top: 30px;
+}
+/**********************
+            TANKS - SEND MAIL 
+                    **********************/
+.tanks {
+  padding: 20px 0;
+  height: 100vh;
+}
+.tanks .content {
+  flex-direction: column;
 }
 .tanks .content .display-txt h1 {
   font-size: 36px;
@@ -1013,32 +1039,7 @@ textarea {
   align-items: center;
   justify-content: center;
 }
-/**********************
-            FOOTER 
-                    **********************/
-.footer {
-  background-color: var(--green-color);
-  border-top: 4px solid var(--grey-color-1);
-  height: 60px;
-}
-.footer a {
-  font-size: 12px;
-  transition: all 0.3s;
-}
-.footer a:hover {
-  color: var(--grey-color-1);
-}
-.copyright {
-  color: #fff;
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.copyright small {
-  color: #fff;
-  margin-top: 20px;
-}
+
 /**********************
             LINES DIVIDER 
                     **********************/
